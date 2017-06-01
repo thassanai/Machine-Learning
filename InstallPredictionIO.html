@@ -49,9 +49,7 @@ cd php-7.1.5
 wget https://raw.githubusercontent.com/thassanai/Machine-Learning/master/php-go.sh
 chmod 755 php-go.sh
 ./php-go.sh
-make
-make test
-make install
+make && make test && make install
 
 cd /etc/init.d/
 wget https://raw.githubusercontent.com/thassanai/Machine-Learning/master/php-fpm
@@ -60,7 +58,13 @@ update-rc.d mysql-server defaults enable
 /etc/init.d/php-fpm start
 
 #Install nginx
-ใช้ script ที่ https://github.com/thassanai/Machine-Learning/blob/master/go-nginx.sh
+cd /usr/src
+wget http://nginx.org/download/nginx-1.12.0.tar.gz
+tar zxvf nginx-1.12.0.tar.gz
+cd nginx-1.12.0
+wget https://raw.githubusercontent.com/thassanai/Machine-Learning/master/go-nginx.sh
+chmod 755 go-nginx.sh
+make && make install
 
 # Config PredictionIO-0.11.0-incubating
 PredictionIO-0.11.0-incubating/conf/pio-env.conf
