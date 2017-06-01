@@ -98,6 +98,12 @@ PIO_STORAGE_SOURCES_MYSQL_PASSWORD=xxxxxx
 download https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.42.zip
 PIO_HOME lib
 
+# Add PATH
+pico /etc/profile
+
+# go to the end of file and put 2 lines
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export PATH=/usr/local/mysql/bin:/home/PredictionIO-0.11.0-incubating/bin:$PATH
 
 apt install ruby ruby-bundler ruby-dev ruby-all-dev
 apt-get install libsqlite3-dev
