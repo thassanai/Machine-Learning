@@ -19,7 +19,7 @@ wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.6
 # HBASE
 wget http://www-eu.apache.org/dist/hbase/1.2.5/hbase-1.2.5-bin.tar.gz
 
-Install MYSQL
+#Install MYSQL
 cd /usr/src
 wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.18-linux-glibc2.5-x86_64.tar.gz
 apt install libaio-dev libssl-dev
@@ -34,10 +34,10 @@ ln -s mysql-5.7.18-linux-glibc2.5-x86_64 mysql
 /usr/local/mysql/bin/mysqld --initialize --datadir=/home/database --basedir=/usr/local/mysql
 
 
-Install php
+#Install php
 apt install libxml2-dev libmcrypt-dev libpq-dev
 
-Install nginx
+#Install nginx
 
 # Config PredictionIO-0.11.0-incubating
 PredictionIO-0.11.0-incubating/conf/pio-env.conf
