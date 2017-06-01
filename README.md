@@ -1,4 +1,4 @@
 # Machine-Learning
 About Machine Learning
 
-How to install 
+How to install PredictionIO from sources.
