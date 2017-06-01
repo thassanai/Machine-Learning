@@ -40,9 +40,24 @@ chmod 755 mysql-server
 update-rc.d mysql-server defaults enable
 /etc/init.d/mysql-server start
 
-#Install php
+# Install php 7.1.5
 apt install libxml2-dev libmcrypt-dev libpq-dev
-ใช้ script https://github.com/thassanai/Machine-Learning/blob/master/php-go.sh
+cd /usr/src
+wget http://th1.php.net/distributions/php-7.1.5.tar.gz
+tar zxvf php-7.1.5.tar.gz
+cd php-7.1.5
+wget https://raw.githubusercontent.com/thassanai/Machine-Learning/master/php-go.sh
+chmod 755 php-go.sh
+./php-go.sh
+make
+make test
+make install
+
+cd /etc/init.d/
+wget https://raw.githubusercontent.com/thassanai/Machine-Learning/master/php-fpm
+chmod 755 php-fpm
+update-rc.d mysql-server defaults enable
+/etc/init.d/php-fpm start
 
 #Install nginx
 ใช้ script ที่ https://github.com/thassanai/Machine-Learning/blob/master/go-nginx.sh
