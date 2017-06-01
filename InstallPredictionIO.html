@@ -32,6 +32,7 @@ tar zxvf  /usr/src/mysql-5.7.18-linux-glibc2.5-x86_64.tar.gz
 chown mysql:mysql mysql-5.7.18-linux-glibc2.5-x86_64
 ln -s mysql-5.7.18-linux-glibc2.5-x86_64 mysql
 /usr/local/mysql/bin/mysqld --initialize --datadir=/home/database --basedir=/usr/local/mysql
+chown -R mysql:mysql /home/database
 
 
 #Install php
