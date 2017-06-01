@@ -51,6 +51,10 @@ chmod 755 php-go.sh
 ./php-go.sh
 make && make test && make install
 
+# Create config for php-fpm
+cd /usr/local/etc
+wget https://raw.githubusercontent.com/thassanai/Machine-Learning/master/php-fpm.conf
+
 cd /etc/init.d/
 wget https://raw.githubusercontent.com/thassanai/Machine-Learning/master/php-fpm
 chmod 755 php-fpm
