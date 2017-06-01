@@ -20,8 +20,13 @@ wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.6
 wget http://www-eu.apache.org/dist/hbase/1.2.5/hbase-1.2.5-bin.tar.gz
 
 Install MYSQL
+cd /usr/src
 wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.18-linux-glibc2.5-x86_64.tar.gz
 apt install libaio-dev libssl-dev
+groupadd mysql
+useradd mysql -g mysql -d /home/database
+cd /usr/local
+tar zxvf  /usr/src/mysql-5.7.18-linux-glibc2.5-x86_64.tar.gz
 /usr/local/mysql/bin/mysqld --initialize --datadir=/home/database --basedir=/usr/local/mysql
 
 
@@ -31,7 +36,7 @@ apt install libxml2-dev libmcrypt-dev libpq-dev
 config pio-env.conf
 
 download https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.42.zip
-¡“‰«È„π PIO_HOME lib
+√Å√í√§√á√©√£¬π PIO_HOME lib
 
 
 apt install ruby ruby-bundler ruby-dev ruby-all-dev
