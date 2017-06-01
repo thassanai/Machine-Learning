@@ -41,7 +41,7 @@ update-rc.d mysql-server defaults enable
 /etc/init.d/mysql-server start
 
 # Install php 7.1.5
-apt install libxml2-dev libmcrypt-dev libpq-dev
+apt install libxml2-dev libmcrypt-dev libpq-dev build-essential
 cd /usr/src
 wget http://th1.php.net/distributions/php-7.1.5.tar.gz
 tar zxvf php-7.1.5.tar.gz
