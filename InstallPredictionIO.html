@@ -7,18 +7,17 @@ apt install openjdk-8-jdk
 
 ./make-distribution.sh
 
-mkdir PredictionIO-0.11.0-incubating/vendors
+cp PredictionIO-0.11.0-incubating.tar.gz /home
+cd /home
+tar zxvf PredictionIO-0.11.0-incubating.tar.gz
+cd /home/PredictionIO-0.11.0-incubating
+mkdir vendors
+cd vendors
 
-Download:
+# Download:
 # SPARK HADOOP
 wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.3-bin-hadoop2.6.tgz
 tar zxvf spark-1.6.3-bin-hadoop2.6.tgz
-
-# ELASTICSEARCH
-wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.6.tar.gz
-
-# HBASE
-wget http://www-eu.apache.org/dist/hbase/1.2.5/hbase-1.2.5-bin.tar.gz
 
 #Install MYSQL
 cd /usr/src
