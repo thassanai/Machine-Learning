@@ -1,0 +1,43 @@
+Install PredictionIO (incubating) from Source Code ref: 
+http://predictionio.incubator.apache.org/install/install-sourcecode/
+
+Download PredictionIO from https://www.apache.org/dyn/closer.cgi/incubator/predictionio/0.11.0-incubating/apache-predictionio-0.11.0-incubating.tar.gz
+
+apt install openjdk-8-jdk
+
+./make-distribution.sh
+
+mkdir PredictionIO-0.11.0-incubating/vendors
+
+Download:
+# SPARK HADOOP
+wget http://d3kbcqa49mib13.cloudfront.net/spark-1.6.3-bin-hadoop2.6.tgz
+
+# ELASTICSEARCH
+wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-1.7.6.tar.gz
+
+# HBASE
+wget http://www-eu.apache.org/dist/hbase/1.2.5/hbase-1.2.5-bin.tar.gz
+
+Install MYSQL
+wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.18-linux-glibc2.5-x86_64.tar.gz
+apt install libaio-dev libssl-dev
+/usr/local/mysql/bin/mysqld --initialize --datadir=/home/database --basedir=/usr/local/mysql
+
+
+Install php
+apt install libxml2-dev libmcrypt-dev libpq-dev
+
+config pio-env.conf
+
+download https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.42.zip
+มาไว้ใน PIO_HOME lib
+
+
+apt install ruby ruby-bundler ruby-dev ruby-all-dev
+apt-get install libsqlite3-dev
+
+apt install python-pip
+
+install php sdk predictionio
+https://github.com/apache/incubator-predictionio-sdk-php
