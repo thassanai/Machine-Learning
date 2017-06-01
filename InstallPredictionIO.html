@@ -25,8 +25,12 @@ wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.18-linux-glibc2.5-x
 apt install libaio-dev libssl-dev
 groupadd mysql
 useradd mysql -g mysql -d /home/database
+chown mysql:mysql /home/database
+
 cd /usr/local
 tar zxvf  /usr/src/mysql-5.7.18-linux-glibc2.5-x86_64.tar.gz
+chown mysql:mysql mysql-5.7.18-linux-glibc2.5-x86_64
+ln -s mysql-5.7.18-linux-glibc2.5-x86_64 mysql
 /usr/local/mysql/bin/mysqld --initialize --datadir=/home/database --basedir=/usr/local/mysql
 
 
