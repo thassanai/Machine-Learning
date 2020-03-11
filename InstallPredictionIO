@@ -1,10 +1,16 @@
 Install PredictionIO (incubating) from Source Code ref: 
-http://predictionio.incubator.apache.org/install/install-sourcecode/ for in-house training @ JOBBBKK.COM 
+http://predictionio.incubator.apache.org/install/install-sourcecode/ for in-house training @ JOBBKK.COM 
 
 
 Download PredictionIO from https://www.apache.org/dyn/closer.cgi/incubator/predictionio/0.11.0-incubating/apache-predictionio-0.11.0-incubating.tar.gz
 
 apt install openjdk-8-jdk
+
+# Add JAVA_HOME & PATH
+pico /etc/profile
+# go to the end of file and put 2 lines
+export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64
+export PATH="$PATH:$JAVA_HOME/bin"
 
 ./make-distribution.sh
 
